@@ -42,10 +42,10 @@ echo.
 
 echo.
 echo .........................................
-echo DO[1]: backup current DNS into backup_%date:~0,10%_%time:~1%.txt
 set now=%date:~0,10%_%time:~1%
 set now=%now:/=_%
 set now=%now::=_%
+echo DO[1]: backup current DNS into backup_%now%.txt
 netsh interface ip show dns > backup_%now%.txt
 echo .........................................
 echo.
